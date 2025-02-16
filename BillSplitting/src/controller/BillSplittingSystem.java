@@ -40,7 +40,7 @@ public class BillSplittingSystem {
         
         Double ori_tax_rate = tax / subTotal;
         BigDecimal bd = new BigDecimal(ori_tax_rate);
-        bd = bd.setScale(4, RoundingMode.HALF_UP); // Rounds to 4 decimal places
+        bd = bd.setScale(10, RoundingMode.HALF_UP); // Rounds to 4 decimal places
         double tax_rate = bd.doubleValue();
         
         Double dish1_tax = dish1_cost * tax_rate;
